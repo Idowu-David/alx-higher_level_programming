@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * main - create list and test insert at beginning of list
+ * main - create list and test insert duplicate value number
  *
  * Return: Always 0.
  */
@@ -25,7 +25,7 @@ int main(void)
 
 	printf("-----------------\n");
 
-	insert_node(&head, -7);
+	insert_node(&head, 98);
 
 	print_listint(head);
 

@@ -23,14 +23,16 @@ int is_palindrome(listint_t **head)
 	listint_t *ptr, *hd;
 	int half, i, len = 0;
 
-	if (head == NULL || *head == NULL)
-		return (0);
+	if (head == NULL || *head == NULL)	/* empty list */
+		return (1);
 	ptr = *head;
 	while (ptr)
 	{
 		len++;
 		ptr = ptr->next;
 	}
+	if (len == 1)
+		return (1);
 	half = len / 2;
 	ptr = *head;
 	for (i = 0; i < half; i++)

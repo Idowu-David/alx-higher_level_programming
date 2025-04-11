@@ -38,12 +38,6 @@ int is_palindrome(listint_t **head)
 
 	/* printf("Middle node is: %d\n", ptr->n); */
 	hd = reverse_list(ptr);
-	/* while (hd)
-	{
-		printf("%d\n", hd->n);
-		hd = hd->next;
-	}*/
-
 	return (compare(*head, hd));
 }
 

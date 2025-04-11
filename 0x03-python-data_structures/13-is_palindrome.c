@@ -39,8 +39,8 @@ int is_palindrome(listint_t **head)
 		ptr = ptr->next;
 
 	/* printf("Middle node is: %d\n", ptr->n); */
-	hd = reverse_list(ptr);
-	return (compare(*head, hd));
+	hd = reverse_second_half(ptr);
+	return (compare_list(*head, hd));
 }
 
 /**
@@ -48,7 +48,7 @@ int is_palindrome(listint_t **head)
  * @ptr: pointer to the first node of the list
  * Return: a pointer to the head of the reversed list
  */
-listint_t *reverse_list(listint_t *ptr)
+listint_t *reverse_second_half(listint_t *ptr)
 {
 	listint_t *cur, *head;
 
@@ -70,7 +70,7 @@ listint_t *reverse_list(listint_t *ptr)
  * @hd: pointer to the first node of the second list.
  * Return: 0, if it is not a palindrome, 1 if it is
  */
-int compare(listint_t *head, listint_t *hd)
+int compare_list(listint_t *head, listint_t *hd)
 {
 	while (head && hd)
 	{

@@ -63,18 +63,20 @@ class Square:
                 print()
             for i in range(self.size):
                 print(" " * self.position[0] + "#" * self.size)
-                
+
     def __str__(self):
         """
         String representation of the Square
         """
         sq = ""
-        for _ in range(self.position[1]):
-            sq += "\n"
-        for i in range(self.size):
-            sq += " " * self.position[0]
-            sq += "#" * self.size
-            if i < self.size - 1:
+        if self.size == 0:
+                sq += ""
+        else:
+            for _ in range(self.position[1]):
                 sq += "\n"
-            
+            for i in range(self.size):
+                sq += " " * self.position[0]
+                sq += "#" * self.size
+                if i < self.size - 1:
+                    sq += "\n"
         return sq

@@ -70,7 +70,7 @@ class Square:
         """
         sq = ""
         if self.size == 0:
-                sq += ""
+            sq += ""
         else:
             for _ in range(self.position[1]):
                 sq += "\n"

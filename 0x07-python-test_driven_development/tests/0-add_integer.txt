@@ -1,0 +1,61 @@
+The ``add_integer`` module
+==========================
+
+This is an example text file
+
+===========================
+
+First import ``add_integer`` from the ``add_integer`` module
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+== Normal addition ==
+>>> add_integer(2, 3)
+5
+>>> add_integer(200, -4)
+196
+
+== One parameter ==
+>>> add_integer(3)
+101
+
+== String addition ==
+>>> add_integer(4, "hello")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer("hi", 7)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+== Float addition ==
+>>> add_integer(4.5, 3.2)
+7
+
+>>> add_integer([2, 3, 4], 9)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(6, [2, 3, 4])
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(1e302, 4)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(5, 1e302)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+

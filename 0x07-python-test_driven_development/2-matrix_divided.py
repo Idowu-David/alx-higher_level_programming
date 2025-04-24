@@ -27,6 +27,8 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
+    if div + 1 == div:
+        raise TypeError("div must be a number")
 
     check_matrix(matrix)
     matrix2 = []
@@ -59,4 +61,5 @@ def check_matrix(matrix):
         if len(row) != row_len:
             raise TypeError("Each row of the matrix must have the same size")
         if not all(isinstance(ele, (int, float)) for ele in row):
-            raise TypeError("Each row of the matrix must have the same size")
+            raise TypeError("matrix must be a matrix (list of lists) of "
+                            "integers/floats")

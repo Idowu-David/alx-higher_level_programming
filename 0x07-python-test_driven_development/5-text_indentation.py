@@ -22,7 +22,7 @@ def text_indentation(text):
         if flag and c == " ":
             flag = False
         else:
-            if flag:
+            if flag and c in chars:
                 print(c)
                 print()
             else:

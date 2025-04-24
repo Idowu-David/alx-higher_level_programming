@@ -65,7 +65,7 @@ Traceback (most recent call last):
 ...
 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
 
->>> matrix_divided(matrix, float(inf))
+>>> matrix_divided(matrix, float('inf'))
 Traceback (most recent call last):
 ...
 TypeError: div must be a number

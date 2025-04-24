@@ -1,0 +1,39 @@
+The ``say_my_name`` module
+==========================
+
+This is an example text file
+
+===========================
+
+First import ``say_my_name`` from the ``say_my_name`` module
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name("David")
+My name is David
+
+>>> say_my_name("David", "Idowu")
+My name is David Idowu
+
+>>> say_my_name("David", 4)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name(4, "David")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name(3)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name([3, 4, "hello"], 4)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name(str(389), str(20))
+My name is 389 20

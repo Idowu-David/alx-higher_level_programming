@@ -1,7 +1,7 @@
 The ``add_integer`` module
 ==========================
 
-This is an example text file
+This is an example test file
 
 ===========================
 

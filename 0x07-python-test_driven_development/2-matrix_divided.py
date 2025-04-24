@@ -12,10 +12,11 @@ def matrix_divided(matrix, div):
     Args:
         matrix(list of lists of int/float): The matrix to divide
         div(int or float): The divisor.add()
-    
+
     Returns:
-        list: A new matrix with elements divided and rounded to 2 decimal places.
-    
+        list: A new matrix with elements divided and rounded to
+        2 decimal places.
+
     Raises:
         TypeError: If the matrix is not a list of lists of integers/floats,
                     if each row is not the same size,
@@ -40,16 +41,19 @@ def matrix_divided(matrix, div):
 
 def check_matrix(matrix):
     """
-    Validates that the matrix is a proper list of equal-sized lists of ints/floats
-    
+    Validates that the matrix is a proper list of equal-sized
+    lists of ints/floats
+
     Args:
         matrix (list): The matrix to validate
-    
+
     Raises:
         TypeError: If the matrix is invalid.
     """
-    if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    if not isinstance(matrix, list) or not all(isinstance(row, list)
+                                               for row in matrix):
+        raise TypeError("matrix must be a matrix (list of lists) of "
+                        "integers/floats")
     row_len = len(matrix[0])
     for row in matrix:
         if len(row) != row_len:

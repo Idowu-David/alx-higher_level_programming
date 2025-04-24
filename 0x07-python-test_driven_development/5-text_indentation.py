@@ -5,10 +5,10 @@
 def text_indentation(text):
     """
     Prints a text with 2 new lines after the characters `.`, `?` and `:`
-    
+
     Args:
         text(str): the text to be printed.
-  
+
     Raises:
         TypeError: if `text` is not a string
     """

@@ -1,7 +1,6 @@
 #!/usr/bin/python3
+""" Doc """
+
 text_indentation = __import__('5-text_indentation').text_indentation
 
-text_indentation("ALX. School? How are you: John")
-
-text =  "ALX. School? How are you: John"
-text = "ALX.School"
+text_indentation("Holberton. School? How are you:    John")

@@ -10,7 +10,7 @@ First import ``say_my_name`` from the ``say_my_name`` module
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
 >>> say_my_name("David")
-My name is David
+My name is David 
 
 >>> say_my_name("David", "Idowu")
 My name is David Idowu

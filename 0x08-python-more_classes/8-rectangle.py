@@ -2,7 +2,6 @@
 """The `Rectangle` class module"""
 
 
-
 class Rectangle:
     """Defines a Rectangle"""
     number_of_instances = 0

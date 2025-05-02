@@ -2,8 +2,6 @@
 """The `Rectangle` class module"""
 
 
-from typing import Type
-
 
 class Rectangle:
     """Defines a Rectangle"""

@@ -64,5 +64,3 @@ class Rectangle:
         able to recreate a new instance by using eval()
         """
         return f'Rectangle({self.width}, {self.height})'
-    
-            

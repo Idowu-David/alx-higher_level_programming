@@ -50,9 +50,19 @@ class Rectangle:
     def __str__(self):
         """Returns a string representation of Rectangle"""
         rect = ""
+        if self.width == 0 or self.height == 0:
+            return ""
         for _ in range(self.height):
             rect += "#" * self.width
             if _ < self.height - 1:
                 rect += "\n"
         return rect
+
+    def __repr__(self):
+        """
+        Returns a string representaion of the rectangle
+        able to recreate a new instance by using eval()
+        """
+        return f'Rectangle({self.width}, {self.height})'
+    
             

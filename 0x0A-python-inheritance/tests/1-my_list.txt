@@ -1,0 +1,8 @@
+The `print_sorted` module
+==========================
+
+This is an example test file
+
+===========================
+
+>>> MyList = __import__('1-my_list').MyList

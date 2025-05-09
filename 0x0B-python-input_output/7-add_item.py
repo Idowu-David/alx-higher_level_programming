@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""the `add_item` module"""
 
 
 import sys

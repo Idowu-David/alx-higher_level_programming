@@ -1,5 +1,21 @@
 #!/usr/bin/python3
-"""the `test_base` module"""
+"""
+Unit tests for the Base class in the models.base module.
+
+This module contains test cases to validate the functionality of the Base class,
+specifically its automatic ID assignment and manual ID setting.
+
+Classes:
+    TestBase: Inherits from unittest.TestCase and contains methods to test
+              various behaviors of the Base class.
+
+Usage:
+    Run this module with a test runner like unittest or pytest to verify the
+    correctness of the Base class implementation.
+
+Example:
+    $ python -m unittest test_base.py
+"""
 
 
 import unittest

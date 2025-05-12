@@ -9,6 +9,10 @@ from models.rectangle import Base
 
 class TestBase(unittest.TestCase):
     """tests the Base class"""
+    def setUp(self):
+        """Reset ID counter before each test"""
+        Base._Base__nb_objects = 0
+    
     def test_rectangle(self):
         """tests basics inheritance of rectangle"""
         r1 = Rectangle(10, 2)

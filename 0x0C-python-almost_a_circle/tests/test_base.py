@@ -30,6 +30,10 @@ class TestBase(unittest.TestCase):
     its automatic ID assignment and handling of user-defined IDs
     """
 
+    def setUp(self):
+        """Reset class-level counter before each test"""
+        Base._Base__nb_objects = 0
+
     def test_base_class(self):
         """
         Test automatic and manual ID assignment in Base instances

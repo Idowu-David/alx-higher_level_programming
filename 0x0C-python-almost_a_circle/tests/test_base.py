@@ -34,19 +34,25 @@ class TestBase(unittest.TestCase):
         """Reset class-level counter before each test"""
         Base._Base__nb_objects = 0
 
-    def test_base_class(self):
+    def test_auto_id_assignment(self):
         """
-        Test automatic and manual ID assignment in Base instances
+        Test automatic ID assignment in Base instances
 
         - When no ID is provide, the Base class should auto-increment
-        - When an ID is manually specified, it should override the
-        auto-assigned one.
         """
         b1 = Base()
         self.assertEqual(b1.id, 1)
         b2 = Base()
         self.assertEqual(b2.id, 2)
-        b3 = Base(12)
-        self.assertEqual(b3.id, 12)
         b4 = Base()
         self.assertEqual(b4.id, 3)
+
+    def test_manual_id_assignment(self):
+        """
+        Test manual ID assignment in Base instances
+        
+        - When an ID is manually specified, it should override the
+        auto-assigned one.
+        """
+        b3 = Base(12)
+        self.assertEqual(b3.id, 12)

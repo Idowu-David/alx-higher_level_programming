@@ -10,7 +10,7 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """initializes the instance attributes"""
         super().__init__(size, size, x, y, id)
-        
+
     @property
     def size(self):
         """gets the value of square size"""

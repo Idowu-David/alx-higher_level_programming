@@ -13,7 +13,7 @@ class TestBase(unittest.TestCase):
     def setUp(self):
         """Reset ID counter before each test"""
         Base._Base__nb_objects = 0
-    
+
     def test_square(self):
         """tests basics inheritance of rectangle"""
         s1 = Square(1)

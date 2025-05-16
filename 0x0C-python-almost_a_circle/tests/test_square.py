@@ -29,24 +29,20 @@ class TestBase(unittest.TestCase):
         """tests the inheritance of rectangle from base class"""
         self.assertTrue(issubclass(Square, Rectangle))
 
-    # def test_raises(self):
-    #     """tests if appropriate exceptions are raised"""
-    #     with self.assertRaises(TypeError):
-    #         Square("4", 4, 2, 1)
-    #     with self.assertRaises(ValueError):
-    #         Square(-3, 4, 3, 2)
-    #     with self.assertRaises(TypeError):
-    #         Square(4, "3", 2, 1)
-    #     with self.assertRaises(ValueError):
-    #         Square(3, -4, 3, 2)
-    #     with self.assertRaises(TypeError):
-    #         Square(2, 4, "2", 1)
-    #     with self.assertRaises(ValueError):
-    #         Square(3, 4, -3, 2)
-    #     # with self.assertRaises(TypeError):
-    #     #     Square(4, 4, 2, "1")
-    #     with self.assertRaises(ValueError):
-    #         Square(3, 4, 3, -2)
+    def test_raises(self):
+        """tests if appropriate exceptions are raised"""
+        with self.assertRaises(TypeError):
+            Square("4", 4, 2, 1)
+        with self.assertRaises(ValueError):
+            Square(-3, 4, 3, 2)
+        with self.assertRaises(TypeError):
+            Square(4, "3", 2, 1)
+        with self.assertRaises(ValueError):
+            Square(3, -4, 3, 2)
+        with self.assertRaises(TypeError):
+            Square(2, 4, "2", 1)
+        with self.assertRaises(ValueError):
+            Square(3, 4, -3, 2)
 
 
 if __name__ == '__main__':

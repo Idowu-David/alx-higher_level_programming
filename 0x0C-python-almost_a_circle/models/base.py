@@ -40,8 +40,8 @@ class Base:
             list_objs(list): a list of instances who inherits of Base
         """
         filename = cls.__name__ + ".json"
-        if not list_objs:
-            json_str = []
+        if list_objs is None:
+            json_str = "[]"
         else:
             list_dicts = [obj.to_dictionary() for obj in list_objs]
             json_str = cls.to_json_string(list_dicts)

@@ -2,6 +2,9 @@
 """defines the `Base` class"""
 
 
+import json
+
+
 class Base:
     """
     Base class for managing id attributes across all future classes.
@@ -19,3 +22,9 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = self.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """returns the JSON string representation of list_dictionaries"""
+        if not list_dictionaries:
+            return "[]"
+        return json.dumps(list_dictionaries)

@@ -97,7 +97,7 @@ class Base:
     @classmethod
     def load_from_file_csv(cls):
         """deserializes objects in CSV"""
-        filename = cls.__name__ + ".json"
+        filename = cls.__name__ + ".csv"
         try:
             with open(filename, "r", newline="") as f:
                 reader = csv.DictReader(f)

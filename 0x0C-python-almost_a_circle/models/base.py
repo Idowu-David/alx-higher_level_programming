@@ -3,6 +3,7 @@
 
 
 import json
+import csv
 
 
 class Base:
@@ -79,5 +80,29 @@ class Base:
                 json_str = fp.read()
             json_list = cls.from_json_string(json_str)
             return [cls.create(**d) for d in json_list]
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """serializes objects in CSV"""
+        filename = cls.__name__ + ".json"
+        field = ("id", "size", "x", "y") if cls.__name__ == "Square" \
+            else ("id", "width", "height", "x", "y")
+        with open(filename, "w", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=field)
+            for obj in (list_objs or []):
+                writer.writerow(obj.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """deserializes objects in CSV"""
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r", newline="") as f:
+                reader = csv.DictReader(f)
+                objs = [cls.create(**{k: int(v) for k, v in row.items()})
+                        for row in reader]
+            return objs
         except FileNotFoundError:
             return []

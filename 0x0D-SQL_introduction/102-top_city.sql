@@ -1,0 +1,6 @@
+-- displays the top 3 of cities temperature during July and August ordered by temperature (descending)
+SELECT city, AVG(value) as avg_temp
+FROM temperatures
+GROUP BY city
+WHERE month = 'August' AND month = 'July'
+ORDER BY avg_temp DESC
